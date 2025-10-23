@@ -1,0 +1,32 @@
+# AWS
+AWS_ACCESS_KEY_ID=AKIAEXAMPLETOKEN12345
+AWS_SECRET_ACCESS_KEY=wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEYabc1234567890
+
+# GitHub/GitLab Personal Access Tokens
+GITHUB_TOKEN=ghp_abcdefghijklmnopqrstuvwxyz0123456789
+GITLAB_TOKEN=glpat-abcdefghijklmnopqrstuvwxyz0123
+
+# Generic API keys
+API_KEY=pk_test_51HfEXAMPLEabcdef1234567890
+PUBLIC_API_KEY=pub_1234567890abcdefEXAMPLE
+
+# Stripe
+STRIPE_SECRET_KEY=sk_test_51EXAMPLEabcdef1234567890
+
+# Database connection string (fake)
+DATABASE_URL=postgres://dbuser:DbPassw0rd!@db.example.com:5432/testdb
+
+# JWT-like token (fake)
+JWT=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiZXhhbXBsZSJ9.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c
+
+# SSH private key (placeholder block — NOT a real key)
+-----BEGIN RSA PRIVATE KEY-----
+MIIEpAIBAAKCAQEAEXAMPLEKEYEXAMPLEKEYEXAMPLEKEYEXAMPLEKEYEXAMPLE
+EXAMPLEEXAMPLEEXAMPLEXAMPLEEXAMPLEXAMPLEEXAMPLEXAMPLEXAMPLE==
+-----END RSA PRIVATE KEY-----
+
+# OAuth client secret
+OAUTH_CLIENT_SECRET=0xabcDEF1234567890example_secret
+
+# Azure Storage connection string (fake)
+AZURE_STORAGE_CONNECTION_STRING=DefaultEndpointsProtocol=https;AccountName=examplestorage;AccountKey=EXAMPLEKEY1234567890;EndpointSuffix=core.windows.net
