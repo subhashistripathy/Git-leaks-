@@ -1,0 +1,60 @@
+title = "Test Secrets Config"
+
+[extend]
+useDefault = true
+
+[[rules]]
+id = "aws-access-key"
+description = "AWS Access Key ID"
+regex = '''AKIA[0-9A-Z]{16,}'''
+severity = "high"
+tags = ["AWS","cloud"]
+
+[[rules]]
+id = "aws-secret-key"
+description = "AWS Secret Access Key"
+regex = '''(?i)aws_secret_access_key\s*=\s*['"]?[A-Za-z0-9/+=]{30,}['"]?'''
+severity = "high"
+tags = ["AWS","secret"]
+
+[[rules]]
+id = "github-token"
+description = "GitHub Personal Access Token"
+regex = '''ghp_[A-Za-z0-9]{36,}'''
+severity = "high"
+tags = ["GitHub","token"]
+
+[[rules]]
+id = "gitlab-token"
+description = "GitLab Personal Access Token"
+regex = '''glpat-[A-Za-z0-9_\-]{20,}'''
+severity = "medium"
+tags = ["GitLab","token"]
+
+[[rules]]
+id = "stripe-secret-key"
+description = "Stripe Secret Key"
+regex = '''sk_test_[A-Za-z0-9]{10,}'''
+severity = "medium"
+tags = ["Stripe","payment"]
+
+[[rules]]
+id = "database-url-password"
+description = "Database URL with password"
+regex = '''(?i)(postgres|mysql|mongodb|mssql):\/\/[^:\s]+:[^@\s]+@'''
+severity = "medium"
+tags = ["database","password"]
+
+[[rules]]
+id = "jwt-token"
+description = "JWT Token"
+regex = '''eyJ[A-Za-z0-9_\-\.]{20,}'''
+severity = "low"
+tags = ["JWT","auth"]
+
+[[rules]]
+id = "oauth-secret"
+description = "OAuth Client Secret"
+regex = '''(?i)(client_secret|oauth_client_secret)\s*[:=]\s*['"]?[A-Za-z0-9_\-]{20,}['"]?'''
+severity = "medium"
+tags = ["OAuth","auth"]
