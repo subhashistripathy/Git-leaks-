@@ -1,31 +1,37 @@
 name: Gitleaks Scan
 
 on:
-  push:
-    branches: ["**"]
+ push:
   pull_request:
-    branches: ["**"]
   workflow_dispatch:
 
 jobs:
   scan:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout repository
+        uses: actions/checkout@v3
         with:
           fetch-depth: 0
 
       - name: Install Gitleaks
         run: |
-          wget -qO gitleaks.tar.gz https://github.com/gitleaks/gitleaks/releases/latest/download/gitleaks_$(uname -s)_x64.tar.gz
+          wget -qO gitleaks.tar.gz https://github.com/gitleaks/gitleaks/releases/latest/download/gitleaks-linux-amd64.tar.gz
           tar -xzf gitleaks.tar.gz
-          sudo mv gitleaks /usr/local/bin/
+          sudo mv gitleaks /usr/local/bin/gitleaks
+          rm -f gitleaks.tar.gz
+          gitleaks version
 
-      - name: Run Gitleaks and generate SARIF (no exit on detect)
+      - name: Run Gitleaks and generate SARIF report
         run: |
-          gitleaks detect --source . --report-format=sarif --report-path=./gitleaks-report.sarif --exit-code=0 --verbose
+          gitleaks detect --source . \
+            --report-format=sarif \
+            --report-path=./gitleaks-report.sarif \
+            --exit-code=0 \
+            --verbose
 
-      - name: Upload SARIF to GitHub Security
+      - name: Upload SARIF to GitHub Code Scanning
         uses: github/codeql-action/upload-sarif@v3
         with:
           sarif_file: "./gitleaks-report.sarif"
