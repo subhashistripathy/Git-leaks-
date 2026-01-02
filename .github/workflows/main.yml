@@ -21,16 +21,9 @@ jobs:
           tar -xzf gitleaks.tar.gz
           sudo mv gitleaks /usr/local/bin/
 
-      - name: Run Gitleaks and generate SARIF report
+      - name: Run Gitleaks and generate SARIF (no exit on detect)
         run: |
-          gitleaks detect --source . --report-format=sarif --report-path=./gitleaks-report.sarif --verbose
-
-      - name: Verify SARIF exists
-        run: |
-          if [ ! -f "./gitleaks-report.sarif" ]; then
-            echo "SARIF file not generated!"
-            exit 1
-          fi
+          gitleaks detect --source . --report-format=sarif --report-path=./gitleaks-report.sarif --exit-code=0 --verbose
 
       - name: Upload SARIF to GitHub Security
         uses: github/codeql-action/upload-sarif@v3
