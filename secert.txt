@@ -1,32 +1,45 @@
-# AWS
-AWS_ACCESS_KEY_ID=AKIAEXAMPLETOKEN12345
-AWS_SECRET_ACCESS_KEY=wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEYabc1234567890
+# AWS Credentials (Fake)
+AWS_ACCESS_KEY_ID=AKIAFAKENEWKEY67890ABCDE
+AWS_SECRET_ACCESS_KEY=NzExampleFakeSecretKey09876zyxWVUTSRQpo98765
 
-# GitHub/GitLab Personal Access Tokens
-GITHUB_TOKEN=ghp_abcdefghijklmnopqrstuvwxyz0123456789
-GITLAB_TOKEN=glpat-abcdefghijklmnopqrstuvwxyz0123
+# GitHub/GitLab/Bitbucket Tokens (Fake)
+GITHUB_TOKEN=ghp_newFakeGithubTokenTEST9876543210abcdefABCDE
+GITLAB_TOKEN=glpat-newGitlabFakeToken98765abcde12345XYZ
+BITBUCKET_TOKEN=bbpat-newBitbucketTokenTEST1234567890abcXYZ
 
-# Generic API keys
-API_KEY=pk_test_51HfEXAMPLEabcdef1234567890
-PUBLIC_API_KEY=pub_1234567890abcdefEXAMPLE
+# Google & Telegram API Keys (Fake)
+GOOGLE_API_KEY=AIzaSyNEWFAKEGOOGLEAPIKEY123456abcdefXYZ
+TELEGRAM_BOT_TOKEN=1234567890:AAHNEWFAKETELEGRAMTOKENabcXYZ98765
 
-# Stripe
-STRIPE_SECRET_KEY=sk_test_51EXAMPLEabcdef1234567890
+# Payment API Keys (Fake)
+PAYPAL_CLIENT_SECRET=sam_paypal_fake_secret_TEST987654321abc
+RAZORPAY_KEY=rzp_test_NEWFAKERAZORPAYKEY98765ABCDEabcde
+SQUARE_ACCESS_TOKEN=sq0atp-newFakeSquareAccessTokenTEST123456XYZ
 
-# Database connection string (fake)
-DATABASE_URL=postgres://dbuser:DbPassw0rd!@db.example.com:5432/testdb
+# Database URIs (Fake)
+POSTGRES_URI=postgres://secuser:NewFakePass!2026@secdb.internal:5432/prodtest
+MSSQL_CONN=Server=tcp:newfake.database.net,1433;Initial Catalog=secTestDB;Persist Security Info=False;User ID=saUser;Password=NewFakeDBPass#2026;
+MYSQL_CONN=mysql://root:NewFakeMysqlPass@mysql.fake.local:3306/sec_test
 
-# JWT-like token (fake)
-JWT=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiZXhhbXBsZSJ9.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c
+# JWT Tokens (Fake)
+JWT_AUTH=eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjoiTkVXRkFLRSJ9.newFakeSignatureTEST12345
+JWT_REFRESH=eyJhbGciOiJIUzI1NiJ9.eyJ0eXBlIjoicmVmcmVzaCJ9.newFakeRefreshSigTEST67890
 
-# SSH private key (placeholder block — NOT a real key)
------BEGIN RSA PRIVATE KEY-----
-MIIEpAIBAAKCAQEAEXAMPLEKEYEXAMPLEKEYEXAMPLEKEYEXAMPLEKEYEXAMPLE
-EXAMPLEEXAMPLEEXAMPLEXAMPLEEXAMPLEXAMPLEEXAMPLEXAMPLEXAMPLE==
------END RSA PRIVATE KEY-----
+# SSH Keys (Fake)
+-----BEGIN OPENSSH PRIVATE KEY-----
+b3BlbnNzaC1rZXktdjEAAAAABm5ld0ZBS0VURVNUSU5HT05MWQAAAAtmYWtlZmFrZQAAA
+-----END OPENSSH PRIVATE KEY-----
 
-# OAuth client secret
-OAUTH_CLIENT_SECRET=0xabcDEF1234567890example_secret
+-----BEGIN EC PRIVATE KEY-----
+MHcCAQEEINewFakeECPrivateKeyForScanningTEST987654321abcXYZ
+-----END EC PRIVATE KEY-----
 
-# Azure Storage connection string (fake)
-AZURE_STORAGE_CONNECTION_STRING=DefaultEndpointsProtocol=https;AccountName=examplestorage;AccountKey=EXAMPLEKEY1234567890;EndpointSuffix=core.windows.net
+# OAuth / Cloud Client Secrets (Fake)
+OAUTH_CLIENT_SECRET=new_fake_oauth_secret_TEST123456XYZabcde
+AZURE_CLIENT_SECRET=new_fake_azure_client_secret_TEST98765ABCDE
+IBM_CLOUD_APIKEY=ibmcloud-newFakeIBMCloudAPIKEYTEST1234567890XYZ
+
+# Storage & Registry Keys (Fake)
+S3_BUCKET_SECRET=s3-newFakeS3BucketSecretTEST987654321abc
+NEXUS_REGISTRY_PASS=sam_nexus_fake_pass_TEST_2026!
+JFROG_ARTIFACTORY_KEY=artifactory-newFakeJFrogKeyTEST123456XYZ
