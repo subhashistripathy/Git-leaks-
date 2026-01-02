@@ -2,20 +2,22 @@ name: Gitleaks Code Scanning
 
 on:
   push:
-    branches:
-      - main
+    branches: [ "main" ]
   pull_request:
-    branches:
-      - main
+    branches: [ "main" ]
   workflow_dispatch:
+
+permissions:
+  contents: read
+  security-events: write  # Required for SARIF to show in Code Scanning
+  actions: read
 
 jobs:
   scan:
-    name: Gitleaks Scan
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
+      - name: Checkout Repository
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
@@ -26,7 +28,7 @@ jobs:
           sudo apt install -y gitleaks
           gitleaks version
 
-      - name: Run Gitleaks and generate SARIF report
+      - name: Run Gitleaks & Generate SARIF
         run: |
           gitleaks detect --source . \
             --config ./gitleaks.toml \
@@ -36,6 +38,6 @@ jobs:
             --verbose
 
       - name: Upload SARIF to GitHub Code Scanning
-        uses: github/codeql-action/upload-sarif@v3
+        uses: github/codeql-action/upload-sarif@v4
         with:
           sarif_file: "./results.sarif"
