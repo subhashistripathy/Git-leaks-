@@ -1,33 +1,38 @@
-name: gitleaks
+name: Gitleaks Scan
 
 on:
   push:
-    branches:
-      - '**'
+    branches: ["**"]
   pull_request:
-    branches:
-      - '**'
+    branches: ["**"]
   workflow_dispatch:
 
 jobs:
   scan:
-    name: gitleaks
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v3
         with:
           fetch-depth: 0
 
-      - name: Run Gitleaks and generate SARIF
-        uses: gitleaks/gitleaks-action@v2
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          args: "--report-format=sarif --report-path=gitleaks-report.sarif"
+      - name: Install Gitleaks
+        run: |
+          wget -qO gitleaks.tar.gz https://github.com/gitleaks/gitleaks/releases/latest/download/gitleaks_$(uname -s)_x64.tar.gz
+          tar -xzf gitleaks.tar.gz
+          sudo mv gitleaks /usr/local/bin/
+
+      - name: Run Gitleaks and generate SARIF report
+        run: |
+          gitleaks detect --source . --report-format=sarif --report-path=./gitleaks-report.sarif --verbose
+
+      - name: Verify SARIF exists
+        run: |
+          if [ ! -f "./gitleaks-report.sarif" ]; then
+            echo "SARIF file not generated!"
+            exit 1
+          fi
 
       - name: Upload SARIF to GitHub Security
-        uses: github/codeql-action/upload-sarif@v2
+        uses: github/codeql-action/upload-sarif@v3
         with:
-          sarif_file: "gitleaks-report.sarif"
-
+          sarif_file: "./gitleaks-report.sarif"
