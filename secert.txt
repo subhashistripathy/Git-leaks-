@@ -1,31 +1,31 @@
-# AWS Credentials (Fake)
+# AWS Credentials 
 AWS_ACCESS_KEY_ID=AKIAFAKENEWKEY67890ABCDE
 AWS_SECRET_ACCESS_KEY=NzExampleFakeSecretKey09876zyxWVUTSRQpo98765
 
-# GitHub/GitLab/Bitbucket Tokens (Fake)
+# GitHub/GitLab/Bitbucket Tokens 
 GITHUB_TOKEN=ghp_newFakeGithubTokenTEST9876543210abcdefABCDE
 GITLAB_TOKEN=glpat-newGitlabFakeToken98765abcde12345XYZ
 BITBUCKET_TOKEN=bbpat-newBitbucketTokenTEST1234567890abcXYZ
 
-# Google & Telegram API Keys (Fake)
+# Google & Telegram API Keys 
 GOOGLE_API_KEY=AIzaSyNEWFAKEGOOGLEAPIKEY123456abcdefXYZ
 TELEGRAM_BOT_TOKEN=1234567890:AAHNEWFAKETELEGRAMTOKENabcXYZ98765
 
-# Payment API Keys (Fake)
+# Payment API Keys 
 PAYPAL_CLIENT_SECRET=sam_paypal_fake_secret_TEST987654321abc
 RAZORPAY_KEY=rzp_test_NEWFAKERAZORPAYKEY98765ABCDEabcde
 SQUARE_ACCESS_TOKEN=sq0atp-newFakeSquareAccessTokenTEST123456XYZ
 
-# Database URIs (Fake)
+# Database URIs 
 POSTGRES_URI=postgres://secuser:NewFakePass!2026@secdb.internal:5432/prodtest
 MSSQL_CONN=Server=tcp:newfake.database.net,1433;Initial Catalog=secTestDB;Persist Security Info=False;User ID=saUser;Password=NewFakeDBPass#2026;
 MYSQL_CONN=mysql://root:NewFakeMysqlPass@mysql.fake.local:3306/sec_test
 
-# JWT Tokens (Fake)
+# JWT Tokens 
 JWT_AUTH=eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjoiTkVXRkFLRSJ9.newFakeSignatureTEST12345
 JWT_REFRESH=eyJhbGciOiJIUzI1NiJ9.eyJ0eXBlIjoicmVmcmVzaCJ9.newFakeRefreshSigTEST67890
 
-# SSH Keys (Fake)
+# SSH Keys 
 -----BEGIN OPENSSH PRIVATE KEY-----
 b3BlbnNzaC1rZXktdjEAAAAABm5ld0ZBS0VURVNUSU5HT05MWQAAAAtmYWtlZmFrZQAAA
 -----END OPENSSH PRIVATE KEY-----
@@ -34,12 +34,12 @@ b3BlbnNzaC1rZXktdjEAAAAABm5ld0ZBS0VURVNUSU5HT05MWQAAAAtmYWtlZmFrZQAAA
 MHcCAQEEINewFakeECPrivateKeyForScanningTEST987654321abcXYZ
 -----END EC PRIVATE KEY-----
 
-# OAuth / Cloud Client Secrets (Fake)
+# OAuth / Cloud Client Secrets
 OAUTH_CLIENT_SECRET=new_fake_oauth_secret_TEST123456XYZabcde
 AZURE_CLIENT_SECRET=new_fake_azure_client_secret_TEST98765ABCDE
 IBM_CLOUD_APIKEY=ibmcloud-newFakeIBMCloudAPIKEYTEST1234567890XYZ
 
-# Storage & Registry Keys (Fake)
+# Storage & Registry Keys 
 S3_BUCKET_SECRET=s3-newFakeS3BucketSecretTEST987654321abc
 NEXUS_REGISTRY_PASS=sam_nexus_fake_pass_TEST_2026!
 JFROG_ARTIFACTORY_KEY=artifactory-newFakeJFrogKeyTEST123456XYZ
