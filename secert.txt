@@ -1,0 +1,59 @@
+# AWS Credentials
+
+AWS_ACCESS_KEY_ID=AKIAFRESH2026X9QPLM8AB
+AWS_SECRET_ACCESS_KEY=AwsSecretFreshKey2026XYZ987654321abc
+
+# GitHub / GitLab / Bitbucket Tokens
+
+GITHUB_TOKEN=ghp_FRESHGithubToken2026_ABCxyz987654321
+GITLAB_TOKEN=glpat_FRESHGitlabToken_2026_XYZ987abc
+BITBUCKET_TOKEN=bbpat_FRESHBitbucketToken2026_TESTxyz987654
+
+# Google & Telegram API Keys
+
+GOOGLE_API_KEY=AIzaSyFRESHGoogleAPIKey2026XYZabc987654
+TELEGRAM_BOT_TOKEN=8765432109:AAGFRESHTelegramBotToken2026XYZabc
+
+
+# Payment API Keys
+
+PAYPAL_CLIENT_SECRET=paypal_fresh_secret_TEST_2026_XYZabc987
+RAZORPAY_KEY=rzp_test_FRESHrazorpayKey2026XYZabc
+SQUARE_ACCESS_TOKEN=sq0atp-FRESHsquareToken2026XYZ987abc
+
+# Database URIs
+
+POSTGRES_URI=postgres://freshuser:FRESHpgPass2026!@pg.internal:5432/freshdb
+MSSQL_CONN=Server=tcp:freshsql.internal.net,1433;Initial Catalog=freshDB;User ID=freshUser;Password=FreshSQLPass#2026;
+MYSQL_CONN=mysql://freshadmin:FRESHmysqlPass2026@mysql.internal:3306/freshdb_test
+
+
+# JWT Tokens
+
+JWT_AUTH=eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjoiRlJFU0gifQ.FRESHjwtAuthSignature2026XYZ
+JWT_REFRESH=eyJhbGciOiJIUzI1NiJ9.eyJ0eXBlIjoiUkVGUkVTSCJ9.FRESHjwtRefreshSignatureXYZ
+
+
+# SSH / Private Keys
+
+SSH_PRIVATE_KEY="-----BEGIN OPENSSH PRIVATE KEY-----
+b3BlbnNzaC1rZXktdjEAAAAABGZyZXNoRkFLRVNTSDIwMjY=
+-----END OPENSSH PRIVATE KEY-----"
+
+EC_PRIVATE_KEY="-----BEGIN EC PRIVATE KEY-----
+MHcCAQEEIFRESHECPrivateKey2026XYZ987654abc
+-----END EC PRIVATE KEY-----"
+
+
+# OAuth / Cloud Secrets
+
+OAUTH_CLIENT_SECRET=fresh_oauth_secret_2026_ABCxyz987654
+AZURE_CLIENT_SECRET=fresh_azure_client_secret_2026_XYZabc
+IBM_CLOUD_APIKEY=ibmcloud_FRESHapikey_2026_TESTXYZ987654
+
+
+# Storage & Registry Secrets
+
+S3_BUCKET_SECRET=s3_FRESHbucketSecret_2026_XYZabc987
+NEXUS_REGISTRY_PASS=fresh_nexus_registry_pass_2026!
+JFROG_ARTIFACTORY_KEY=artifactory_FRESHkey_2026_XYZabc987654
